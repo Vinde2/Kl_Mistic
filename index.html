@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Kl_Mistic</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+    
+      <h1>Witamy na stronie dla fanów Kl_Mistic!</h1>
+      <p>Wykaż inicjatywę i dowiedz się o nadciągających rozgrywkach.</p>
+      
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">O czym możesz się dowiedzieć:</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a href="/1">
+        <img class="item__img" src="../static/img/bals.png" alt="home">
+        <span>Rozgrywki</span></a>
+      </li>
+      
+      <li class="list__item">
+        <a href="/2">
+        <img class="item__img" src="../static/img/football.png" alt="home">
+        <span>Nasza drużyna</span></a>
+      </li>
+      <li class="list__item">
+        <a href="/3">
+        <img class="item__img" src="../../static/img/globus.png" alt="home">
+        <span>Świat Sportowców</span></a>
+      
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

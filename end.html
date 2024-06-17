@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../static/css/style.css"> 
+  <title>Zajęcia sportowe.</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Szukasz drużyny Piłkarskiej dla swojego Dziecka?</h1>
+      <h3>Jeśi tak ......</h3>
+      <p>Mamy dla ciebie najlepsze opcje.</p>
+    </div>
+  </header>
+  <main>
+    <div class = "tlo__img">
+    {% block content %}
+    <h2 class="main__title main__title--margin">CHCESZ DĄŁĄCZYĆ DO NASZEGO KLUBU</h2>
+    <h3 class="main__title main__title--margin">WOLNE MIEJSCA JUŻ TERAZ!</h3>
+    <marquee direction="left" scrollamount="2" scrolldelay="1" onmouseover="this.stop()" onmouseout="this.start()" class = "main__kolor">
+      Zapraszamy!!! Nie ważny jest twój wiek... Ważny jest zapał do gry i chęć wygranej!
+      </marquee>
+      <form action="{{ url_for('/<size>/<lights>/<device>') }}" method="post">
+      <fieldset>
+        <legend>Dane osobowe</legend>
+        <label>Imię: <input name="imie" placeholder="Wpisz swoje imię" required></label>
+        <label>E-mail: <input type="email" email="email" placeholder="Wpisz swój e-mail" required></label>
+        <label>Nr telefonu: <input type="tel" name="tel" placeholder="Wpisz swój nr telefonu"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Opcje</legend>    
+        <label for="temat">Temat:</label>
+        <select name="temat" id="temat">
+          <optgroup label="Zajęcia i Kluby z wolnymi miejscami!!!"></optgroup>
+            <option value="erdos">zajęcia piłkarskie 7-9lat</option>
+            <option value="feynman">zajęcia piłkarskie 10-14lat</option>
+            <option value="why">zajęcia piłkarskie 15-19lat</option>
+            <option value="klub">Klub Piłkarski "Kl Mistic V2"</option>
+          </optgroup>
+          <optgroup label="Inne tematy"></optgroup>
+            <option value="Trenerzy">Trenerzy</option>
+            <option value="inwestycje">Inwestycje</option>
+          </optgroup>
+        </select>
+        <p>Czy chcesz, abyśmy się z Tobą skontaktowali?</p>
+        <label>Tak: <input type="radio" value="tak" name="kontakt-tn"></label>
+        <label>Nie: <input type="radio" value="nie" name="kontakt-tn"></label>
+        <p>Wybierz dozwolone formy kontaktu z Tobą</p>
+        <label>Prywatne spotkanie: <input type="checkbox" name="tam-tam" value="tak"></label>
+        <label>Telefon: <input type="checkbox" name="telefon" value="tak"></label>
+        <label>E-mail: <input type="checkbox" name="e-mail" value="tak"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Wiadomość</legend>
+        <textarea name="wiadomosc" cols="80" rows="10" maxlength="3000" minlength="50" required></textarea>
+        <input type="submit" value="Wyślij">
+        <input type="reset">
+      </fieldset>
+    </form>
+    <center>
+      <table style="width: 80%; height: 15em">
+        <caption>...</caption>
+        <colgroup>
+          <col style="background-color: rgb(126, 118, 117); width: 200px">
+          <col style="background-color: rgb(196, 190, 144); width: 200px">
+          <col style="background-color: rgb(196, 190, 144); width: 200px">
+          <col style="background-color: rgb(196, 190, 144); width: 200px">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Plan Zajęć</th>
+            <th>Grupa 7-9 lat</th>
+            <th>Grupa 10-14 lat</th>
+            <th>Grupa 15-19 lat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Dni Treningów</th>
+            <td>Poniedziałki-Środy</td>
+            <td>Wtorki-Czwartki</td>
+            <td>Poniedziałki-Piątki</td>
+          </tr>
+          <tr>
+            <th>Godziny Treningów</th>
+            <td>19.00-20.00</td>
+            <td>17.00-19.00</td>
+            <td>16.00-18.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Trenerzy</th>
+            <td>Wiktoria Barańska</td>
+            <td>Tomasz Sroczka</td>
+            <td>Miłosz Mielnik</td>
+          </tr>
+        </tfoot>
+      </table>
+    </center>
+  <p>...</p>
+  </div>
+    {% endblock %}
+  </main>
+  <footer>
+ <iframe style="background-color: rgb(0, 0, 0); width: 1460px">
+</footer>
+</body>
+</html>
